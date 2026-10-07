@@ -3,7 +3,8 @@ import {upload} from "../controller/middleware/upload.js"
 import {
   createService,
   getServices,
-  getServiceById
+  getServiceById,
+   deleteService,
 } from "../controller/Servicecontroller.js";
 import { authuser } from "../controller/middleware/userAuth.js";
 
