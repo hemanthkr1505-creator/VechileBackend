@@ -113,7 +113,7 @@
 
 ////////////////////////
  import { client } from "../config/Redis.js";
-import ServiceModel from "../model/servicemodel.js";
+import ServiceModel from "../model/serviceModel.js";
 
 export const createService = async (req, res) => {
   try {
