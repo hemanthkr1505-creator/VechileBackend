@@ -7,7 +7,7 @@ import { connectDb } from "./config/Database.js";
 import { redisConnect } from "./config/Redis.js";
 
 import registerRouter from "./router/Registerrouter.js";
-import AfterService from "./router/AfterServiceRouter.js"; // Fixed "./Router/" -> "./router/"
+import AfterService from "./router/AfterServicerouter.js";// Fixed "./Router/" -> "./router/"
 import PaymentRouter from "./router/PaymentRoute.js";
 import AdminRouter from "./router/Adminrouter.js";
 import Feedbackrouter from "./router/Feebackrouter.js";
