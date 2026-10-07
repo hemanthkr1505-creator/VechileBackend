@@ -7,17 +7,11 @@ import { connectDb } from "./config/Database.js";
 import { redisConnect } from "./config/Redis.js";
 
 import registerRouter from "./router/Registerrouter.js";
-import AfterService from "./Router/AfterServiceRouter.js";
-// 
-// import paymentRouter from "./Router/PaymentRoute.js";
+import AfterService from "./router/AfterServiceRouter.js"; // Fixed "./Router/" -> "./router/"
 import PaymentRouter from "./router/PaymentRoute.js";
-
-
-//  import AdminRouter from "./router/AdminRouter.js";
- import AdminRouter from "./router/Adminrouter.js";
+import AdminRouter from "./router/Adminrouter.js";
 import Feedbackrouter from "./router/Feebackrouter.js";
 import serviceRouter from "./router/servicerouter.js";
-// import ProfileRouter  from "./router/Profilerouter.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -39,16 +33,10 @@ connectDb();
 // Routes
 app.use("/api", registerRouter);
 app.use("/api", AfterService);
-// app.use("/api/Profile", ProfileRouter);
 app.use("/api/feedback", Feedbackrouter);
 app.use("/api/service", serviceRouter);
-// app.use("/api",PaymentRouter)
-app.use("/api",PaymentRouter)
-
-//app.use("/api/payment", paymentRouter);
-
-
- app.use("/api", AdminRouter);
+app.use("/api", PaymentRouter);
+app.use("/api", AdminRouter);
 
 // JSON parsing error handler
 app.use((err, req, res, next) => {
